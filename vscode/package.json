@@ -1,0 +1,25 @@
+{
+  "name": "prev25",
+  "displayName": "PREV'25 Syntax Highlighting",
+  "description": "Syntax highlighting support for the PREV'25 language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.97.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "prev25",
+      "aliases": ["PREV'25", "prev25"],
+      "extensions": [".prev25"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "prev25",
+      "scopeName": "source.prev25",
+      "path": "./syntaxes/prev25.tmLanguage.json"
+    }]
+  }
+}

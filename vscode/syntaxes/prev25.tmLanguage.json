@@ -1,0 +1,131 @@
+{
+  "name": "PREV'25",
+  "scopeName": "source.prev25",
+  "fileTypes": ["prev", "prev25"],
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#keywords" },
+    { "include": "#definitions" },
+    { "include": "#strings" },
+    { "include": "#characters" },
+    { "include": "#constants" },
+    { "include": "#operators" },
+    { "include": "#types" },
+    { "include": "#identifiers" }
+  ],
+  "repository": {
+    "comments": {
+      "name": "comment.line.number-sign.prev25",
+      "match": "#.*$"
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.prev25",
+          "match": "\\b(if|then|else|end|while|do|return|let|in)\\b"
+        },
+        {
+          "name": "keyword.other.prev25",
+          "match": "\\b(typ|var|fun|sizeof)\\b"
+        }
+      ]
+    },
+    "definitions": {
+      "patterns": [
+        {
+          "match": "(typ)\\s+([A-Za-z_][A-Za-z0-9_]*)\\s*(=)",
+          "captures": {
+            "1": { "name": "keyword.other.prev25" },
+            "2": { "name": "entity.name.type.prev25" },
+            "3": { "name": "keyword.operator.assignment.prev25" }
+          }
+        },
+        {
+          "match": "(var)\\s+([A-Za-z_][A-Za-z0-9_]*)\\s*(:)",
+          "captures": {
+            "1": { "name": "keyword.other.prev25" },
+            "2": { "name": "variable.other.prev25" },
+            "3": { "name": "punctuation.separator.prev25" }
+          }
+        },
+        {
+          "match": "(fun)\\s+([A-Za-z_][A-Za-z0-9_]*)",
+          "captures": {
+            "1": { "name": "keyword.other.prev25" },
+            "2": { "name": "entity.name.function.prev25" }
+          }
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.prev25",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.prev25",
+          "match": "\\\\(\\\\|\"|0x[0-9A-Fa-f]{2})"
+        }
+      ]
+    },
+    "characters": {
+      "name": "string.quoted.single.prev25",
+      "begin": "'",
+      "end": "'",
+      "patterns": [
+        {
+          "name": "constant.character.escape.prev25",
+          "match": "\\\\(\\\\|'|0x[0-9A-Fa-f]{2})"
+        }
+      ]
+    },
+    "constants": {
+      "patterns": [
+        {
+          "name": "constant.numeric.integer.prev25",
+          "match": "\\b[0-9]+\\b"
+        },
+        {
+          "name": "constant.language.boolean.prev25",
+          "match": "\\b(true|false)\\b"
+        },
+        {
+          "name": "constant.language.null.prev25",
+          "match": "\\bnull\\b"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.arithmetic.prev25",
+          "match": "[+\\-*/%]"
+        },
+        {
+          "name": "keyword.operator.logical.prev25",
+          "match": "[&|!]"
+        },
+        {
+          "name": "keyword.operator.comparison.prev25",
+          "match": "(==|!=|<=|>=|<|>)"
+        },
+        {
+          "name": "keyword.operator.assignment.prev25",
+          "match": "="
+        },
+        {
+          "name": "keyword.operator.pointer.prev25",
+          "match": "\\^"
+        }
+      ]
+    },
+    "types": {
+      "name": "support.type.prev25",
+      "match": "\\b(int|char|bool|void)\\b"
+    },
+    "identifiers": {
+      "name": "variable.other.prev25",
+      "match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b"
+    }
+  }
+}

@@ -33,23 +33,5 @@ This will enable syntax highlighting for the language.
 
 ## TextMate
 
-The TextMate grammar is located in the `textmate` folder. It provides syntax highlighting 
+The TextMate grammar is located in the `textmate` folder. It provides syntax highlighting
 for VSCode and other editors that support TextMate grammars.
-
-### Using the TextMate Grammar in VSCode
-
-To use the PREV'25 syntax highlighting in VSCode:
-
-1. Create a new VSCode extension:
-   ```bash
-   mkdir -p ~/.vscode/extensions/prev25-language
-   ```
-
-2. Copy the TextMate grammar files to the extension directory:
-   ```bash
-   cp -r textmate/* ~/.vscode/extensions/prev25-language/
-   ```
-
-3. Restart VSCode
-
-4. Open any file with `.prev` or `.prev25` extension, or manually set the language mode to "PREV'25"
