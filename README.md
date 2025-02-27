@@ -38,3 +38,11 @@ for VSCode and other editors that support TextMate grammars.
 
 To use with VSCode it is recommended to install the extension from the `.vsix` file in
 the releases.
+
+You can build it yourself by first installing the `vsce` tool and then packaging it:
+
+```bash
+npm install -g @vscode/vsce
+cd vscode
+vsce package
+```
