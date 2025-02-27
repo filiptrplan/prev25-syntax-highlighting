@@ -62,8 +62,9 @@
   "]"
   "{"
   "}"
-  "<"
-  ">"
+] @punctuation.bracket
+
+[
   ","
   "."
   ":"
@@ -76,7 +77,7 @@
 
 ; Function calls
 (postfix_expr
-  (postfix_expr) @function
+  (postfix_expr) @function.call
   "(" @punctuation.bracket
   ")" @punctuation.bracket)
 
@@ -87,7 +88,7 @@
 
 ; Types
 (def
-  "typ" @keyword.storage.type
+  "typ" @keyword.type
   (ident) @type)
 
 ; Parameters

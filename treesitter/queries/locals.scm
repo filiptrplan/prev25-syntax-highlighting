@@ -1,21 +1,21 @@
 ; Variable definitions
 (def
   "var" @keyword.storage
-  (ident) @definition.var) @definition.scope
+  (ident) @local.definition.var) @local.scope
 
 ; Function definitions
 (def
   "fun" @keyword.function
-  (ident) @definition.function) @definition.scope
+  (ident) @local.definition.function) @local.scope
 
 ; Type definitions
 (def
-  "typ" @keyword.storage.type
-  (ident) @definition.type) @definition.scope
+  "typ" @keyword.type
+  (ident) @local.definition.type) @local.scope
 
 ; Parameters as local variables
 (id_colon_type
-  (ident) @definition.parameter)
+  (ident) @local.definition.parameter)
 
 ; Let block creates a new scope
 (stmt
@@ -23,7 +23,7 @@
   (_)
   "in" @keyword
   (_)
-  "end" @keyword) @scope
+  "end" @keyword) @local.scope
 
 ; References
-(ident) @reference
+(ident) @local.reference
