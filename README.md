@@ -35,3 +35,6 @@ This will enable syntax highlighting for the language.
 
 The TextMate grammar is located in the `textmate` folder. It provides syntax highlighting
 for VSCode and other editors that support TextMate grammars.
+
+To use with VSCode it is recommended to install the extension from the `.vsix` file in
+the releases.
