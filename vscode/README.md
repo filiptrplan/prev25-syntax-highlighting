@@ -16,9 +16,3 @@ This extension provides syntax highlighting for the PREV'25 language in Visual S
 ## Known Issues
 
 None at this time. Please report any issues you find.
-
-## Release Notes
-
-### 1.0.0
-
-Initial release of PREV'25 Syntax Higlighting for VS Code
